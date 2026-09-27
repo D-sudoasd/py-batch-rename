@@ -1,0 +1,6 @@
+{
+  "kind": "AI-generated conceptual illustration",
+  "tool": "built-in image_gen",
+  "prompt": "Refine this cover by removing ALL small marketing slogans and unrequested decorative words. In particular remove 'Revert anytime', 'Better files. A more organized you', the sentences at bottom left and upper right, and words on pencil/book spines. Keep the main title 'py-batch-rename', subtitle 'Preview, organize and rename files', Chinese '文件批量重命名与预览', and small 'Conceptual illustration'. Keep file cards, their short filenames and 001/002/003 labels and beautiful layout. Replace 'Revert anytime' with accurate 'Undo last rename'. No new text. Preserve wide composition.",
+  "not_experimental_data": true
+}

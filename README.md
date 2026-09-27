@@ -1,4 +1,39 @@
-# 文件批量重命名 · py-batch-rename
+<p align="center">
+  <img src="assets/readme/hero.png" width="100%" alt="py-batch-rename — Preview and apply consistent names across a file batch / 预览并批量应用统一文件命名. Conceptual illustration / 概念插图。">
+</p>
+
+# py-batch-rename
+
+**Preview and apply consistent names across a file batch**
+
+**预览并批量应用统一文件命名**
+
+[Overview / 项目概览](#overview--项目概览) · [Start / 开始使用](#start--开始使用) · [Reference / 详细说明](#reference--详细说明)
+
+## Overview / 项目概览
+
+Choose naming rules, inspect the proposed filenames and apply the batch locally. Use numbering, replacement, insertion, imported names or timestamps to organize files.
+
+选择命名规则，检查目标文件名后在本地执行；支持编号、替换、插入、导入名称及时间命名。
+
+- **Live preview** — 参数改变后即时显示新文件名。
+- **Collision checks** — 拦截批次内重复目标名称。
+- **Undo the last rename** — 可撤回上一次成功重命名，时间属性修改不在此范围。
+
+## Start / 开始使用
+
+```powershell
+py -m pip install -r requirements.txt
+py run.py
+```
+
+Review the preview before applying changes. Timestamp editing is Windows-specific and is not covered by rename undo.
+
+执行前需核对预览；时间属性修改面向 Windows，且不属于命名撤回范围。
+
+*Cover: AI-generated conceptual illustration. 封面为 AI 生成的概念插图。*
+
+## Reference / 详细说明
 
 **独立的 Python 批量改名工具：添加文件、即时预览、写盘、撤回。没有会员墙，没有数量上限。**
 
