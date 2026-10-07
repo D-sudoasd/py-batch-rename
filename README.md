@@ -1,43 +1,28 @@
-<p align="center">
-  <img src="assets/readme/hero.png" width="100%" alt="py-batch-rename — Preview and apply consistent names across a file batch / 预览并批量应用统一文件命名. Conceptual illustration / 概念插图。">
-</p>
-
 # py-batch-rename
 
-**Preview and apply consistent names across a file batch**
+**添加文件、选择命名规则、检查预览，再一次应用到整个批次。**
 
-**预览并批量应用统一文件命名**
+A local Python / PySide6 batch renamer with live filename previews, duplicate-target checks, and undo for the last successful rename. Useful for organizing measurement files, images, and document collections.
 
-[Overview / 项目概览](#overview--项目概览) · [Start / 开始使用](#start--开始使用) · [Reference / 详细说明](#reference--详细说明)
+[安装与启动](#安装--快速开始) · [命名规则](#功能) · [使用说明](#使用说明) · [许可说明](#说明与许可)
 
-## Overview / 项目概览
-
-Choose naming rules, inspect the proposed filenames and apply the batch locally. Use numbering, replacement, insertion, imported names or timestamps to organize files.
-
-选择命名规则，检查目标文件名后在本地执行；支持编号、替换、插入、导入名称及时间命名。
-
-- **Live preview** — 参数改变后即时显示新文件名。
-- **Collision checks** — 拦截批次内重复目标名称。
-- **Undo the last rename** — 可撤回上一次成功重命名，时间属性修改不在此范围。
-
-## Start / 开始使用
-
-```powershell
-py -m pip install -r requirements.txt
-py run.py
+```mermaid
+flowchart TD
+  A[添加文件或文件夹] --> B[设置替换、编号或导入名称]
+  B --> C[预览每个目标文件名]
+  C --> D{批次内目标名称是否重复}
+  D -->|重复| B
+  D -->|无重复| E[确认并写入文件名]
+  E --> F[需要时撤回上一次重命名]
 ```
 
-Review the preview before applying changes. Timestamp editing is Windows-specific and is not covered by rename undo.
+| 处理任务 | 对应规则 |
+| --- | --- |
+| 按样品或序号统一命名 | 自定义名称与编号 |
+| 替换文件名中的旧标识 | 查找替换、插入或删除 |
+| 使用已有命名清单 | Excel / CSV 第一列，按文件列表顺序匹配 |
 
-执行前需核对预览；时间属性修改面向 Windows，且不属于命名撤回范围。
-
-*Cover: AI-generated conceptual illustration. 封面为 AI 生成的概念插图。*
-
-## Reference / 详细说明
-
-**独立的 Python 批量改名工具：添加文件、即时预览、写盘、撤回。没有会员墙，没有数量上限。**
-
-这是优速文件批量重命名（`yoso-rename`）的**独立替代实现**，不是它的源码移植，也不包含其品牌、登录、支付或广告。
+这是独立实现的批量改名工具。撤回适用于上一次成功的重命名；Windows 时间属性修改单独处理，不属于命名撤回范围。
 
 ## 功能
 
