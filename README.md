@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/readme/hero.png" width="100%" alt="py-batch-rename — Preview and apply consistent names across a file batch / 预览并批量应用统一文件命名. Conceptual illustration / 概念插图。">
+</p>
+
 # py-batch-rename
 
 **添加文件、选择命名规则、检查预览，再一次应用到整个批次。**
@@ -6,15 +10,12 @@ A local Python / PySide6 batch renamer with live filename previews, duplicate-ta
 
 [安装与启动](#安装--快速开始) · [命名规则](#功能) · [使用说明](#使用说明) · [许可说明](#说明与许可)
 
-```mermaid
-flowchart TD
-  A[添加文件或文件夹] --> B[设置替换、编号或导入名称]
-  B --> C[预览每个目标文件名]
-  C --> D{批次内目标名称是否重复}
-  D -->|重复| B
-  D -->|无重复| E[确认并写入文件名]
-  E --> F[需要时撤回上一次重命名]
-```
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/readme/diagrams/workflow-readme-md-1-mobile.svg">
+  <img src="assets/readme/diagrams/workflow-readme-md-1.svg" width="100%" alt="py-batch-rename — workflow schematic / 流程示意图">
+</picture>
+
+<sub>[Editable diagram source / 可编辑图源](assets/readme/diagrams/workflow-readme-md-1.mmd)</sub>
 
 | 处理任务 | 对应规则 |
 | --- | --- |
