@@ -25,6 +25,18 @@ A local Python / PySide6 batch renamer with live filename previews, duplicate-ta
 
 这是独立实现的批量改名工具。撤回适用于上一次成功的重命名；Windows 时间属性修改单独处理，不属于命名撤回范围。
 
+## 原理示意 / Principle schematic
+
+<p align="center">
+  <img src="assets/readme/principle.png" width="100%" alt="Filename mapping, duplicate targets and last-rename undo — conceptual schematic / 概念示意图">
+</p>
+
+*文件名一一映射与扩展名保留；重复目标需检查，可撤回上一次成功改名。概念示意，非实际界面。*
+
+*One-to-one filename mapping with extensions retained, duplicate-target checks and last-rename undo. Conceptual schematic, not an actual interface.*
+
+[查看完整示意图 / View full-size schematic](assets/readme/principle.png)
+
 ## 功能
 
 | 命名方式 | 做什么 |
